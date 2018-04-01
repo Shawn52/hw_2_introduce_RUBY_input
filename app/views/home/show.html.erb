@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>SHAWN KANG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">												<!--style powered by w3.css-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">			<!--google web font(kor)-->
+    <link rel="stylesheet" href="css/style.css">																											<!--style-->
+    <script language="javascript" src="js/script.js"></script>																			<!--javascript-->
+
+</head>
+
+<body>
+
+<!-- Loading Image -->
+<!--<div id="loading"><img id="loading-image" src="img/ajax-loader_big_snake.gif" alt="Loading..." /></div>-->
+<div id="loading"><img id="loading-image" src="https://i.imgur.com/ePODRUs.gifv" alt="" /></div>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+     <ul class="w3-navbar" id="myNavbar">
+            <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+                  <a class="w3-hover-black" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                    	<i class="fa fa-bars"></i>
+                  </a>
+            </li>
+            <li class="w3-left-align"><%= link_to "HOME", '/home/form' %></li>
+            <li class="w3-hide-small"><a href="#about">MAJOR</a></li>
+            <li class="w3-hide-small"><a href="#portfolio">HOBBY</a></li>
+            <li class="w3-hide-small"><a href="#hobby">FOOD</a></li>
+            <li class="w3-hide-small"><a href="#interest">INTEREST</a></li>
+            <li class="w3-hide-small"><a href="#contact">ETC</a></li>
+            <li class="w3-hide-small w3-right">
+                  <a href="#" class="w3-hover-red">
+                    	<i class="fa fa-search"></i>
+                  </a>
+            </li>
+      </ul>
+    
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
+            <ul class="w3-navbar w3-left-align w3-white">
+                  <li><a href="#about" onclick="toggleFunction()">ABOUT</a></li>
+                  <li><a href="#portfolio" onclick="toggleFunction()">HOBBY</a></li>
+                  <li><a href="#contact" onclick="toggleFunction()">CONTACT</a></li>
+                  <li><a href="#interest" onclick="toggleFunction()">INTEREST</a></li>
+                  <li><a href="#">SEARCH</a></li>
+            </ul>
+      </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+    	<span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity"><%= @abc %></span></span>
+    </div>
+</div>
+
+
+<!-- About Section -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">ABOUT ME</h3>
+    <div class="w3-row w3-center">
+    
+    </div>
+    <div class="w3-row w3-center w3-padding-large">
+    	Now I'm going to introduce about me. <br>
+        Who I am and what I like.<br>
+        And also my hobbies, favorite food. <br>
+        I hope you fun with my introduce.<br>
+        I'm <%= @abc %> from South Korea.<br><br><br>
+        <%= image_tag("profilepic.jpg", width: "180", height: "320") %><br><br><br><br>
+        
+    </div>
+    <div class="w3-row">
+        <div class="w3-col m6 w3-center w3-padding-large">
+            <p><b><i class="fa fa-user w3-margin-right"></i>My Major is Computer Science</b></p><br>
+            <!--<img src="img/20140814_081636_00.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">-->
+                <%= image_tag("computerscience.jpg", width: "500", height: "333", class: "w3-round w3-image w3-opacity w3-hover-opacity-off", alt: "Photo of Me") %>
+            <p><b>Making webprogram, c9 project</b></p>
+        </div>
+        
+        <!-- Hide this text on small devices -->
+        <div class="w3-col m6 w3-hide-small w3-padding-large">
+            <p>
+            <br><br><br>
+            This is the picture of my laptop which has<br>
+            html source on it. I was making the webpage <br>
+            which I wanted. This is my normal life of <br>
+            spending time to make some of project. It <br>
+            sometimes makes me bored spending so many <br>
+            calories on the desk but I feel pleased about <br>
+            my project result.<br>
+            I began my major sending my Korean SAT score <br>
+            to school to apply computer science. I didn't <br>
+            even know what the C language is. Now I know <br>
+            c lng, java, nodejs, python and else but on <br>
+            that term, it was hard to begin the major. So <br>
+            I worked hard myself and tried to listen to <br>
+            professor what he or she is saying. I have <br>
+            heard engineering majors are hard to start <br>
+            cause they're making student hard to study. <br>
+            CS is still hard for me but I'm trying to be <br>
+            better. 
+            Now I'm in the junior season of the major, <br>
+            and it's getting harder. I'm listening to 6<br>
+            subject this semester(Operating System, <br>
+            Algorithm, logic circuit, Data Communication<br>
+            ,Computer System, and Data structure). Subjects<br>
+            are getting so harder and they are making me <br>
+            stressful. But I'm going to overcome hardships<br>
+            make better gpa than last semester.
+            While I'm in the major, I got lots of interst <br>
+            computer science. Now I am looking for a job <br>
+            from Iot, webprogramming, network and else. <br>
+            Those I mentioned are which I am looking foward<br>
+            to get a job and those are a popular jobs for <br>
+            graduated computer science students. Computer <br>
+            science is now so popular in the world and I <br>
+            want to get jobs and provide advantageous <br>
+            programs to clients.
+            
+            </p>
+        </div>
+    </div><!--end row-->
+    
+</div><!--end section-->
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-16"></div>
+
+<!-- Portfolio Section -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-light-grey w3-wide" >HOBBY</span>
+  </div>
+</div>
+
+<div class="w3-row w3-center" id="portfolio">
+	<br><br>    <h3 class="w3-center">HOBBY</h3>
+	<b>Do hobbies what I want and rest before studying!</b>
+</div>
+
+<div class="w3-center">
+    <br><br><p>
+    I'm going to show some of my pictrues that I took about hobbies. <br>
+    I love Jogging, Reading Magazines, Watching Dramas and making food. <br>
+    Those four hobbies make me rest and feel placid. <br><br><br>
+    <em><b>Jogging, Reading Magazines, Watching Dramas and Making Food ... </b></em><br><br><br>
+    Hobbies are cool. It makes me taking off stress.<br><br>
+</p>
+</div>
+
+<!-- Unity5 3D RPG게임<--></-->
+<div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+        <!--<img src="img/unity rpg.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Unity5 3D RPG" width="500" height="333">-->
+        <%= image_tag("jogging.jpg", class: "w3-round w3-image w3-opacity w3-hover-opacity-off", alt: "Unity5 3D RPG", width: "500", height: "333") %>
+    <p><b>Jogging on the street</b></p>
+	</div>
+
+    <div class="w3-col m6 w3-center w3-padding-large">
+        <p>
+            For the programmers, we need to keep stretch our bodies to make flexible.<br>
+            Programmers usually stay on the desk for long time.<br>
+            I'm also the one of those programmers and work out is necessary.<br>
+            There are lots of excersie that I can do but the most simple and easy to do is jogging.<br>
+            I usually go to the park near my home is located for jogging on weekends.<br>
+            I love jogging on the track and also near trees and flowers fill me of fresh.<br>
+            I should keep doing the jogging to make in shape.<br>
+            
+        </p>
+    </div>
+</div><!--end row-->
+
+<!--&lt;!&ndash; Unity5 2D 연습&ndash;&gt;-->
+<!--<div class="w3-row">-->
+    <!--<div class="w3-col m6 w3-center w3-hide-small w3-padding-large">-->
+        <!--<p>-->
+        	<!--유니티를 배우던 초기에 책에 있던 예제로 따라 만들어보았던 게임입니다.<br>-->
+            <!--난이도가 높기로 악명높아 한번만 더 도전하는 욕구를 끌어내는 중독성으로<br>-->
+            <!--히트를 쳤던 게임 Flappy Bird를 모방한 예제입니다.<br>-->
+            <!--처음이자 마지막으로 해보았던 2D게임 프로젝트입니다.<br>-->
+        <!--</p>-->
+    <!--</div>-->
+
+    <!--<div class="w3-col m6 w3-center w3-padding-large">-->
+        <!--<img src="img/20140814_081636_00.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Unity5 2D" width="500" height="333">-->
+        <!--<p><b>Unity5 2D Flappy</b></p>-->
+    <!--</div>-->
+<!--</div>&lt;!&ndash;end row&ndash;&gt;-->
+
+<!-- 반응형 웹디자인-->
+<div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+        <!--<img src="img/RWD web.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="RWD web" width="500" height="333">-->
+        <%= image_tag("magazine.jpg", class: "w3-round w3-image w3-opacity w3-hover-opacity-off", alt: "RWD web", width: "500", height: "333") %>
+    <p><b>Reading Magazines, Times</b></p>
+	</div>
+
+    <div class="w3-col m6 w3-center w3-padding-large">
+        <p>
+        I love to read magazines. <br>
+        My favorite magazines are Times, National Geographic and else. <br>
+        Why I love to read magazines is I can keep studying the English and also I can know how's going in the society.<br>
+        Magazines are kind of expensive for students but it's worth to buy.<br>
+        I hope I could read some articles about IT society. It will help me a lot to know about IT concepts.<br>
+        Even it is hard to get a magazine because the book store is located far from my house, it is giving me a lots of opportunity to know about what I didn't know.<br>
+        I'm reading Times and National Geographic but I am going to try to read other magazines too.<br>
+        </p>
+    </div>
+</div><!--end row-->
+
+<!-- 커플 위드 플로어 개발-->
+<div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+        <!--<img src="img/couple-with-floor.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="RWD web" width="500" height="333">-->
+        <%= image_tag("suits.jpg", class: "w3-round w3-image w3-opacity w3-hover-opacity-off", alt: "RWD web", width: "500", height: "333") %>
+        <p><b>Watching Dramas in Netflix, Suits</b></p>
+    </div>
+
+    <div class="w3-col m6 w3-center w3-padding-large">
+        <p>
+            Netflix is the website I usually browse a lot. I love watching dramas in Netflix.<br>
+            I recently start watching the United States drama "Suits". It's the story about<br>
+            lawyers in the law firm. I usually watch drama on the bed while I am sleeping. I can keep listen to English<br>
+            and it really helps me to studying English.It has jargon but it still relieves my stress
+when watching the drama.<br>
+            I hope I could finsish watching "Suits" and watch movie this time.<br>
+            I saw the movie "annihilation" which is listed on the top. It stimulates me.<br>
+            <br>
+        </p>
+    </div>
+</div><!--end row-->
+
+<div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+        <!--<img src="img/couple-with-floor.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="RWD web" width="500" height="333">-->
+        <iframe width="500" height="333" src="https://www.youtube.com/embed/gn7xjlNDWns" frameborder="0" allowfullscreen></iframe>
+        <p><b>Girls on fire, Nadine Balfe</b></p>
+    </div>
+
+    <div class="w3-col m6 w3-center w3-padding-large">
+        <p>
+            I usually listen to the music when I'm about to get rid of stress. I use the application<br>
+            Melon which has the music player in it. There's lots of music in the application and I love the chart which melon has.<br>
+            I usually listen to popsong, hiphop and bitbox music. They are all awesome to listen.<br>
+            I made my favorite song list and Nadine Balfe's recent son "Girls on fire" is my most favorite song.<br>
+            It really does fire on me wihle I'm listening to the music. Of coures, I'm getting rid of stress and <br>
+            I saw the movie "annihilation" which is listed on the top. It stimulates me.<br>
+            provides excitement.<br>
+        </p>
+    </div>
+</div>
+
+</div><!--end section-->
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-16"></div>
+
+<!-- Hobby Section -->
+
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+    	<span class="w3-xxlarge w3-text-light-grey w3-wide">FOOD</span>
+    </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="hobby"> <!--얘가 짝궁임-->
+    <h3 class="w3-center">FOOD</h3>
+   	<div class="w3-center">
+    	<p class="w3-padding-large">
+        	Eating food is important way for me to feel comfortable.<br>
+            Searching the nice restaurant and eat nice food is my another hobby.<br>
+            I'll show my favorite food and some of photos I took before.<br><br><br>
+            
+            <em><b>Food makes me happniess...</b></em>
+        </p>
+    </div>
+    
+    <p class="w3-padding-large w3-center">
+</div> <!--여기!-->
+</p>
+
+<div class="w3-row">
+	<div class="w3-col m6 w3-center w3-padding-large">
+        <%= image_tag("IMG_3201.JPG", class: "w3-round w3-image w3-opacity w3-hover-opacity-off", alt: "RWD web", width: "400", height: "255") %>
+        <p><b>Homemade Cream Pasta</b></p>
+    </div>
+    
+    <div class="w3-col m6 w3-center w3-padding-large w3-hide-small">
+        <p>
+        	I love all kind of Pasta. <br>
+            When I go to the buffet, I really love to have dish with pasta.<br>
+            My favorite pasta is cream pasta which is next to pragraph.<br>
+            Photo of the cream pasta is made by me. I looked the recipe in the internet.<br>
+            I also love tomato sauce pasta too. I love the mix tomato and cream too.<br>
+            I also tried to make the tomato sauce but I failed.
+        </p>
+    </div>
+</div><!--end row-->
+
+<div class="w3-row">
+	<div class="w3-col m6 w3-center w3-padding-large">
+        <%= image_tag("16003282_1064566863655395_7819267621144946761_n.jpg", class: "w3-round w3-image w3-opacity w3-hover-opacity-off", alt: "RWD web", width: "400", height: "255") %>
+        <p><b>Cheese Pizza, DA VINCI'S</b></p>
+    </div>
+    
+    <div class="w3-col m6 w3-center w3-padding-large w3-hide-small">
+        <p>
+        	I ate this pizza from United States, South Carolina.<br>
+            Pizza was kind of expensive but it worth to eat it.<br>
+            Cheese in the pizza was massive, and the bread was crispy.<br>
+            Hot Pizza which is come from oven was so good for me to eat it and also my colleagues.<br>
+            I really love pizza and I like to make pizzas in my home by my own.<br>
+            I have made pizza with tortilla dough and put tomato sauce on it and put some cheese and some of vegtables.<br>
+        </p>
+    </div>
+</div><!--end row-->
+
+<div class="w3-row">
+	<div class="w3-col m6 w3-center w3-padding-large">
+        <%= image_tag("IMG_2054.JPG", class: "w3-round w3-image w3-opacity w3-hover-opacity-off", alt: "RWD web", width: "400", height: "255") %>
+        <p><b>Cheese burger, From Itaewon</b></p>
+    </div>
+    
+    <div class="w3-col m6 w3-center w3-padding-large w3-hide-small">
+        <p>
+        	This massive cheese burger is from Itaewon.<br>
+            I ate this burger 2years ago. You can see the huge cheese inside the burger.<br>
+            This restaurant was operating by foreign owner. He is really good at making burgers.<br>
+            Burger is kind of expensive to eat it but it worth to eat it.<br>
+            I also enjoy to make burgers in home. I made pattey by myself and put some fresh vegtables, mayonnaise, kepchup.<br>
+            
+        </p>
+    </div>
+</div><!--end row-->
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-16"></div>
+
+<!-- interest Section -->
+
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+    	<span class="w3-xxlarge w3-text-light-grey w3-wide">INTEREST</span>
+    </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="interest">
+    <h3 class="w3-center">INTEREST</h3>
+   	<div class="w3-center">
+    	<p class="w3-padding-large">
+        	Interest is important for me to get rid of stress.<br>
+            Sometimes it's necessary and somtimes it really helps me.<br>
+            Let me show my interest this time.<br><br><br>
+            
+            <em><b>Kitty and the Club are necessary factors for me...</b></em>
+        </p>
+    </div>
+</div>
+    
+<p class="w3-padding-large w3-center">
+	
+</p>
+
+<div class="w3-row">
+	<div class="w3-col m6 w3-center w3-padding-large">
+        <%= image_tag("kitty.jpg", class: "w3-round w3-image w3-opacity w3-hover-opacity-off", alt: "RWD web", width: "400", height: "255") %>
+        <p><b>Kitty from unknown link</b></p>
+    </div>
+    
+    <div class="w3-col m6 w3-center w3-padding-large w3-hide-small">
+        <p>
+        	I don't have the kitty in my home but kitty is one of my wish. <br>
+            I hope I could get one kitty in my home.<br>
+            Lot's of friends have kitty in their home and sometimes I hang out with their kitty.<br>
+            It really does help me about getting comfortable and it's real making me happiness.<br>
+            Kittys are sometimes so angry about us and they sometimes want to atack human but still<br>
+            kittys are worth to possess.
+        </p>
+    </div>
+</div><!--end row-->
+
+<div class="w3-row">
+	<div class="w3-col m6 w3-center w3-padding-large">
+        <%= image_tag("club.jpg", class: "w3-round w3-image w3-opacity w3-hover-opacity-off", alt: "RWD web", width: "400", height: "255") %>
+        <p><b>Unknown Club from Google</b></p>
+    </div>
+    
+    <div class="w3-col m6 w3-center w3-padding-large w3-hide-small">
+        <p>
+        	This is the normal club photo but meaning of club don't contains only dancing club.<br>
+            Club contain the big meaning of human community.<br>
+            My second interest, club is real import factor to me because I can interact with people.<br>
+            I can get enthusiasm from people who are extrovert.<br>
+            It really does get off from my stress because I can gossip with people what I have done.<br>
+            Also normally there are lots some nice in the club.<br>
+        </p>
+    </div>
+</div><!--end row-->
+
+</div><!--end section-->
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-16"></div>
+
+<!-- Contact Section -->
+<div class="bgimg-4 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-light-grey w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="contact">
+    <h3 class="w3-center">CONTACT ME!</h3>
+    <p class="w3-center">I'd love your feedback!</p>
+    <p class="w3-center w3-padding-large">
+    	<em><b>I would honored to be contacted by you. I hope we can talk more who want to interact.</em><br><br>
+        010-5910-4553, kakaotalk : taeegue52
+    </p>
+
+</div><!--end section-->
+
+
+<!-- Footer -->
+<footer>
+	<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+        This webpage is applied with css.<br>
+        <div class="w3-small">optimized for chrome, firefox
+        <div class="w3-small">powered by w3.css, font.google</div>
+	</div>
+</footer>
+ 
+ 
+</body>
+</html>
