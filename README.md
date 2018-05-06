@@ -1,1 +1,1 @@
-This project is introduction webpage to submit hw from likelion.
+This project is the introduction webpage to submit hw from likelion.
